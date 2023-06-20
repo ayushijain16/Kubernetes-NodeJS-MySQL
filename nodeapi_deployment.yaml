@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapi-pod
+  labels:
+    app: webapi-pod
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: webapi-pod
+  template:
+    metadata:
+      name: webapi-pod
+      labels:
+        app: webapi-pod
+    spec:
+      containers:
+        - name: webapi-pod
+          image: ayushi1610/webapi:v5
+          env:
+          - name: MYSQL_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: mysql-password
+                key: password
+          - name: MYSQL_DATABASE
+            value: Organization
+          - name: MYSQL_HOST
+            value: $(DB_CLUSTERIP_SERVICE_HOST)
+          - name: MYSQL_USER
+            value: TEST 
+          ports:
+            - containerPort: 9000
+              name: "api-port"
+

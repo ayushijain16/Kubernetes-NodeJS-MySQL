@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mysql-data
+data:
+  init.sql: |
+    CREATE DATABASE IF NOT EXISTS Organization;
+    USE Organization;
+    CREATE TABLE employee (employeeid INT, employeename VARCHAR(256), employeerole VARCHAR(256), employeeproject VARCHAR(256));
+    INSERT INTO employee VALUES (101, 'Amit', 'Developer', 'AB');
+    INSERT INTO employee VALUES (102, 'Akash', 'Senior Developer', 'Carfax');
+    INSERT INTO employee VALUES (103, 'Rajat', 'Developer', 'NYS');
+    INSERT INTO employee VALUES (104, 'Deepak', 'Team Lead', 'DOL');
+    INSERT INTO employee VALUES (105, 'Kaveri', 'Manager', 'WYD');
