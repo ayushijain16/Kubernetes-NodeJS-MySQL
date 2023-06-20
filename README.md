@@ -11,6 +11,10 @@ This tier is exposing a node api and when this API is invoked, it will communica
 
 [DockerImageurl](https://hub.docker.com/layers/ayushi1610/webapi/v5/images/sha256-9f7e9e59ca468f6b998d764580c2da8ed72edb10b363d254cb115d6e18137364?context=explore)
 
+1. [Link for the code repository](https://github.com/ayushijain16/Kubernetes-NodeJS-MySQL)
+2. [Docker hub URL for docker images](https://hub.docker.com/layers/ayushi1610/webapi/v5/images/sha256-9f7e9e59ca468f6b998d764580c2da8ed72edb10b363d254cb115d6e18137364?context=explore)
+3. [URL for Service API tier to view the records from backend tier](http://34.133.174.202:3000/)
+
 ## **Overall Flow**
 
 ### **Web API**
